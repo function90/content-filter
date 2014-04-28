@@ -25,7 +25,7 @@ class plgContentF90filter extends JPlugin
 		// for flexi content component
  		public function onContentBeforeDisplay($context, &$row, &$params, $page = 0)
         {
-        	return $this->onContentPrepare($context, $row, $params, $page);
+        	$this->onContentPrepare($context, $row, $params, $page);
         }
 
 	/**
