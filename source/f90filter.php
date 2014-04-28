@@ -22,6 +22,12 @@ class plgContentF90filter extends JPlugin
             return true;
         }
         
+		// for flexi content component
+ 		public function onContentBeforeDisplay($context, &$row, &$params, $page = 0)
+        {
+        	return $this->onContentPrepare($context, $row, $params, $page);
+        }
+
 	/**
      * preg_match callback to process each match
      */

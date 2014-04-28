@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.1" type="plugin" group="content">
+<extension version="3.1" type="plugin" group="content" method="upgrade">
 	<name>plg_content_f90filter</name>
 	<author>Function90</author>
 	<creationDate>Oct 2013</creationDate>
@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>dev.fucntion90@gmail.com</authorEmail>
 	<authorUrl>www.function90.com</authorUrl>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<description>PLG_CONTENT_F90FILTER_XML_DESCRIPTION</description>
 
 	<files>
