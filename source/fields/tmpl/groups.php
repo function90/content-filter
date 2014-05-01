@@ -11,6 +11,7 @@ $counter = 0;
 ?>
 <div id="f90filter-content-sample-row">
 	<?php foreach ($this->value as $values):?>
+		<?php  $values = is_array($values) ? (object)$values : $values;?>
 		<?php if(empty($values->token)) : ?>
 			<?php continue;?>
 		<?php endif;?>
