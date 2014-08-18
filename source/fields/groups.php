@@ -31,7 +31,15 @@ class F90FilterFormFieldGroups extends JFormField
 		
 		$html = '';
 		ob_start();
-		include dirname(__FILE__).'/tmpl/groups.php';
+
+		$version = new JVersion();
+		$major  = str_replace('.', '', $version->RELEASE);
+		if($major == '25'){
+			include dirname(__FILE__).'/tmpl/groups25.php';
+		}
+		else{					
+			include dirname(__FILE__).'/tmpl/groups.php';
+		}	
 		$html = ob_get_contents();
 		ob_end_clean();
 		return $html;
