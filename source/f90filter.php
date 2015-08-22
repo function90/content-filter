@@ -12,6 +12,10 @@ class plgContentF90filter extends JPlugin
 {
         public function onContentPrepare($context, &$row, &$params, $page = 0)
         {
+			if(JFactory::getApplication()->isAdmin()){
+				return true;
+			}
+
        		if ( JString::strpos( $row->text, 'f90filter' ) === false ){
             	return true;
 			}
@@ -25,6 +29,10 @@ class plgContentF90filter extends JPlugin
 		// for flexi content component
  		public function onContentBeforeDisplay($context, &$row, &$params, $page = 0)
         {
+			if(JFactory::getApplication()->isAdmin()){
+				return true;
+			}
+
         	$this->onContentPrepare($context, $row, $params, $page);
         }
 
