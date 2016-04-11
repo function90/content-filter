@@ -56,6 +56,12 @@ class plgContentF90filter extends JPlugin
             return $match[2];
         }
             
+        $match[1] = str_replace("&nbsp;", " ", $match[1]);
+
+        $match[1] = htmlentities($match[1], null, 'utf-8');
+        $match[1] = str_replace("&nbsp;", " ", $match[1]);
+        $match[1] = html_entity_decode($match[1]);
+
         $rules = trim($match[1]);
         $rules = explode(' ', $rules);
         
